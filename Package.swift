@@ -15,7 +15,7 @@ let package = Package(
       targets: ["Glaip"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/WalletConnect/WalletConnectSwift.git", .upToNextMinor(from: "1.7.0"))
+    .package(url: "https://github.com/loudsqueak/WalletConnectSwift.git", branch: "master")
   ],
   targets: [
     .target(
