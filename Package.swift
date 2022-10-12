@@ -7,6 +7,7 @@ let package = Package(
   name: "Glaip",
   platforms: [
     .iOS(.v13),
+    .macOS(.v10_14)
   ],
   products: [
     .library(
