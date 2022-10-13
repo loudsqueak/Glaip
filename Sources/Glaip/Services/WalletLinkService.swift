@@ -96,10 +96,10 @@ public final class WalletLinkService: WalletService {
 
   private func getDeepLink(wallet: WalletType) -> String {
     let connectionUrl = walletConnect.connect(title: title, description: description)
-    let encodeURL = connectionUrl.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-    let end = encodeURL.replacingOccurrences(of: "=", with: "%3D").replacingOccurrences(of: "&", with: "%26")
+    let encodeURL = connectionUrl.addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
+//    let end = encodeURL.replacingOccurrences(of: "=", with: "%3D").replacingOccurrences(of: "&", with: "%26")
 
-    return "\(wallet.rawValue)\(end)"
+      return "\(wallet.rawValue)\(encodeUrl.absoluteString)"
   }
 }
 
